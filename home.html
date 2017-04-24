@@ -12,6 +12,10 @@
         <h3>The #1 solution for creating the best fantasy team!</h3>
     </div>
 
+    <div id="myTeam" class="sidenav">
+
+    </div>
+
     <div class="searchPosition">
         <h2>Search position</h2>
         <form id="searchBox" method="get">
@@ -24,15 +28,15 @@
     <div class="results">
         <h1>Results go here</h1>
 
-        <div id="players">
-        <ol class="ranks">
-            <li>Player (Stats) <button>Add to team</button></li>
-            <li>Player (Stats) <button>Add to team</button></li>
-            <li>Player (Stats) <button>Add to team</button></li>
-            <li>Player (Stats) <button>Add to team</button></li>
-            <li>Player (Stats) <button>Add to team</button></li>
-            <li>Player (Stats) <button>Add to team</button></li>
-        </ol>
+        <div id="players" hidden>
+            <ol class="ranks">
+                <li>Player (Stats) <button>Add to team</button></li>
+                <li>Player (Stats) <button>Add to team</button></li>
+                <li>Player (Stats) <button>Add to team</button></li>
+                <li>Player (Stats) <button>Add to team</button></li>
+                <li>Player (Stats) <button>Add to team</button></li>
+                <li>Player (Stats) <button>Add to team</button></li>
+            </ol>
         </div>
 
     </div>
@@ -43,7 +47,7 @@
         * {
             text-align: center;
         }
-
+        
         .ranks {
             text-align: center;
             list-style-position: inside;
