@@ -18,45 +18,53 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <h1>My Team</h1>
-    </div>
+        <ol id="myPlayers">
+        </ol>
 
-    <!-- Use any element to open the sidenav -->
-    <i class="fa fa-angle-double-left"></i>
+    </div>
 
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
     <div id="main">
 
-    </div>
-    <div class="heading">
-        <h1>Fan-tasizer!</h1>
-        <h3>The #1 solution for creating the best fantasy team!</h3>
-    </div>
+        <div class="container">
+            <!-- Use any element to open the sidenav -->
+            <i class="fa fa-angle-double-left" id="arrow"></i>
 
-    <div id="myTeam" class="sidenav">
+            <div class="heading">
+                <h1>Fan-tasizer!</h1>
+                <h3>The #1 solution for creating the best fantasy team!</h3>
+            </div>
 
-    </div>
+            <div id="myTeam" class="sidenav">
 
-    <div class="searchPosition">
-        <h2>Search position</h2>
-        <form id="searchBox" method="get">
-            <input type="text" class="search" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
-        </form>
-    </div>
+            </div>
 
-    <br><br><br><br>
+            <div class="searchPosition">
+                <h2>Search Player</h2>
+                <form id="searchBox" method="get">
+                    <input type="text" class="search" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+                </form>
+            </div>
 
-    <div class="results">
-        <h1>Results go here</h1>
+            <br><br><br><br>
 
-        <div id="players" hidden>
-            <ol class="ranks">
-                <li>Player (Stats) <button>Add to team</button></li>
-                <li>Player (Stats) <button>Add to team</button></li>
-                <li>Player (Stats) <button>Add to team</button></li>
-                <li>Player (Stats) <button>Add to team</button></li>
-                <li>Player (Stats) <button>Add to team</button></li>
-                <li>Player (Stats) <button>Add to team</button></li>
-            </ol>
+            <div class="results">
+                <button id="display">Show Rankings</button>
+                <!--<h1>Results go here</h1>-->
+
+                <div id="players" hidden>
+                    <ol class="ranks">
+                        <li>Player 1 (Stats) <button class="addTeam">Add to team</button></li>
+                        <li>Player 2 (Stats) <button class="addTeam">Add to team</button></li>
+                        <li>Player 3 (Stats) <button class="addTeam">Add to team</button></li>
+                        <li>Player 4 (Stats) <button class="addTeam">Add to team</button></li>
+                        <li>Player 5 (Stats) <button class="addTeam">Add to team</button></li>
+                        <li>Player 6 (Stats) <button class="addTeam">Add to team</button></li>
+                    </ol>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
