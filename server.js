@@ -32,7 +32,7 @@ app.listen(port);
 var connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Mastermind315",
+    password: "raiders76",
     database: "fantasy_db"
 });
 
