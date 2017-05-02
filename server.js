@@ -1,50 +1,50 @@
-// Dependencies;
 var express = require("express");
 var bodyParser = require("body-parser");
-// Grabs HTML from URLs
-var request = require("request");
-// Scrapes HTML
-var cheerio = require("cheerio");
+var methodOverride = require("method-override");
+var exphbs = require("express-handlebars");
+var mysql = require('mysql');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
-// Initialize Express
+var port = process.env.PORT || 3000;
+
 var app = express();
-var PORT = process.env.PORT || 3000;
+
+//allow sessions
+app.use(session({ secret: 'app', cookie: { maxAge: 6 * 1000 * 1000 * 1000 * 1000 * 1000 * 1000 } }));
+app.use(cookieParser());
+
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static(process.cwd() + "/public"));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Override with POST having ?_method=DELETE
+app.use(methodOverride("_method"));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 
+var statsController = require("./controllers/statsController.js");
 
-request('http://www.nfl.com/stats/categorystats?tabSeq=0&statisticCategory=PASSING&conference=null&season=2016&seasonType=REG&d-447263-s=PASSING_YARDS&d-447263-o=2&d-447263-n=1', function(error, response, body) {
+app.listen(port);
 
-    // console.log(body);
-
-    var $ = cheerio.load(body);
-
-    var tableRows = $('tr')
-    var filteredData = [];
-
-    //Player, Team, Pos, Comp, Att, Yards, Tds, interceptions
-
-    tableRows.each(function(i, element) {
-        let cleanRow = [];
-        let justThese = [1, 2, 4, 5, 8, 11, 12];
-        let tds = $(element).children('td');
-
-        tds.each(function(tdIndex, td) {
-            cleanRow.push($(this).text().trim());
-        });
-
-        let filteredRow = cleanRow.filter(function(el, i) {
-            if (justThese.indexOf(i) >= 0) return el;
-        });
-
-        filteredData.push(filteredRow);
-    });
-
-    filteredData = filteredData.splice(1);
-
-    console.log(filteredData);
+var connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "Mastermind315",
+    database: "fantasy_db"
 });
 
-// Listen on port 3000
-app.listen(PORT, function() {
-    console.log("App running on port 3000!");
-});
+connection.connect(function(err) {
+    if (err) throw err;
+    console.log('Connected as id: ' + connection.threadId);
+})
+
+app.get('/', function(req, res) {
+    // res.send('hi')
+    connection.query('SELECT * FROM tophundred;', function(err, data) {
+        //res.json(data);
+        res.render('index', { tophundred: data });
+    })
+})
