@@ -82,6 +82,17 @@ span {
     float: right;
 }
 
+i#arrow.fa.fa-angle-double-left {
+    margin-right: -32px;
+}
+
+#viewTeam {
+    font-size: medium;
+    margin-top: 10px;
+    margin-left: -21px;
+    transform: rotate(90deg);
+    }
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 

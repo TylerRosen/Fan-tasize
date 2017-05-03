@@ -1,15 +1,15 @@
 /* Set the width of the side navigation to 250px and the right margin of the page content to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "450px";
-    document.getElementById("main").style.marginRight = "450px";
-    document.getElementById("arrow").style.marginRight = "450px";
+    $("#mySidenav").width(450);
+    $("#main").css({marginRight:'450px'});
+    $("#arrow").css({marginRight:'420px'});
 }
 
 /* Set the width of the side navigation to 0 and the right margin of the page content to 0 */
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginRight = "0";
-    document.getElementById("arrow").style.marginRight = "0";
+    $("#mySidenav").width(0);
+    $("#main").css({marginRight:'0'});
+    $("#arrow").css({marginRight:'-32px'});
 }
 
 $('i.fa.fa-angle-double-left ').click(function() {
@@ -22,7 +22,7 @@ $('#display').click(function() {
 })
 
 $('.addTeam').click(function() {
-    $('#myPlayers').append($('span').text());
+    $('#myPlayers').append($('<p>').text());
 })
 
 $('#searchBox').submit(function() {
