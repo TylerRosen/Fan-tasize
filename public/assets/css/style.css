@@ -7,8 +7,10 @@ body {
     color: #f7f7f8;
 }
 
-
-.jumbotron, #team, #search, #viewTeam {
+.jumbotron,
+#team,
+#search,
+#viewTeam {
     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }
 
@@ -17,7 +19,11 @@ body {
     color: #cbccce;
 }
 
-.tfbutton, #display {
+.tfbutton,
+#display,
+button,
+#em,
+input.search {
     color: black;
 }
 
@@ -110,7 +116,7 @@ i#arrow.fa.fa-angle-double-left {
     margin-top: 10px;
     margin-left: -21px;
     transform: rotate(90deg);
-    }
+}
 
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
