@@ -21,6 +21,18 @@
 
 <body>
 
+    {{#if logged_in}}
+			<a href="/users/sign-out" id="sign-out">Sign Out ({{this.username}})</a>
+
+			<p class="clear"><strong>logged_in:</strong> {{logged_in}} |
+			<strong>user_email:</strong> {{user_email}} |
+			<strong>user_id:</strong> {{user_id}} |
+			<strong>username:</strong> {{username}}</p>
+		{{else}}
+			<a href="/users/sign-in">Sign In</a>
+			<a href="/users/new">Register</a>
+		{{/if}}
+
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <h1 id="team">My Team</h1>

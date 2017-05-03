@@ -18,7 +18,11 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 
 var routes = require('./controllers/routes.js');
+var usersController = require("./controllers/usersController.js");
+var teamController = require("./controllers/teamController.js");
 app.use('/', routes);
+app.use("/users", usersController);
+app.use("/team", teamController);
 
 
 var port = process.env.PORT || 3000;
