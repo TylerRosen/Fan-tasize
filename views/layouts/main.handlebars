@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <title>Fan-tasizer</title>
 
+    <!--Links Bootstrap-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--Links CSS-->
+    
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
     <!--Links font-awesome-->
@@ -17,7 +23,7 @@
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <h1>My Team</h1>
+        <h1 id="team">My Team</h1>
         <ol id="myPlayers">
         </ol>
 
@@ -28,19 +34,19 @@
 
         <div class="container">
             <!-- Use any element to open the sidenav -->
-            <i class="fa fa-angle-double-left" id="arrow"></i>
+            <i class="fa fa-angle-double-left" id="arrow"><span id="viewTeam">View Team</span></i>
 
-            <div class="heading">
+            <div class="jumbotron">
                 <h1>Fan-tasizer!</h1>
                 <h3>The #1 solution for creating the best fantasy team!</h3>
             </div>
 
-            <div id="myTeam" class="sidenav">
+            <div id="myteam" class="sidenav">
 
             </div>
 
             <div class="searchPosition">
-                <h2>Search Player</h2>
+                <h2 id="search">Search Player</h2>
                 <form id="searchBox" method="get">
                     <input type="text" class="search" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
                 </form>
@@ -54,13 +60,13 @@
 
                 <div id="players" hidden>
                     <ol class="ranks">
-                        {{!--<li>Player 1 (Stats) <button class="addTeam">Add to team</button></li>
-                        <li>Player 2 (Stats) <button class="addTeam">Add to team</button></li>
-                        <li>Player 3 (Stats) <button class="addTeam">Add to team</button></li>
-                        <li>Player 4 (Stats) <button class="addTeam">Add to team</button></li>
-                        <li>Player 5 (Stats) <button class="addTeam">Add to team</button></li>
-                        <li>Player 6 (Stats) <button class="addTeam">Add to team</button></li>--}}
-						{{{body}}}
+                        {{!--<li>Player 1 <a class="btn btn-primary btn-md" href="#" role="button">Add to team</a></li>
+                        <li>Player 2 <a class="btn btn-primary btn-md" href="#" role="button">Add to team</a></li>
+                        <li>Player 3 <a class="btn btn-primary btn-md" href="#" role="button">Add to team</a></li>
+                        <li>Player 4 <a class="btn btn-primary btn-md" href="#" role="button">Add to team</a></li>
+                        <li>Player 5 <a class="btn btn-primary btn-md" href="#" role="button">Add to team</a></li>
+                        <li>Player 6 <a class="btn btn-primary btn-md" href="#" role="button">Add to team</a></li>--}}
+                        {{{body}}}
                     </ol>
                 </div>
 
@@ -70,11 +76,10 @@
 
     </div>
 
-	{{!--{{{body}}}--}}
-
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/assets/js/app.js"></script>
 
 </body>
 
 </html>
+
