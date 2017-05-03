@@ -22,7 +22,7 @@ $('#display').click(function() {
 })
 
 $('.addTeam').click(function() {
-    $('#myPlayers').append($('<p>').text());
+    $('#myPlayers').append($('li').text());
 })
 
 $('#searchBox').submit(function() {
