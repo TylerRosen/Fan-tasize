@@ -1,3 +1,31 @@
+-- user with an id of 1 clicks Add Player next to Travis Kelce
+    
+--     make sure you can't add multiple of the same player twice
+
+--         before you do an insert you do 
+
+--             select * from user_players where playerable_id = 1 AND playerable_type = 'tightends' AND user_id = 1;
+--                 you'll get the data back 
+--                     if it's null or undefined then you can insert into user_players   
+--                         INSERT INTO user_players (playerable_id, playerable_type, user_id) VALUES (1, 'tightends', 1)
+--                     if it's there then you tell the user can't pick the same player twice
+--                         redirect back to page they were on before
+-- --------
+
+-- if user is deleting a
+--     DELETE FROM user_players where playerable_id=1 AND user_id =1;
+--         redirect back to main page
+-- -------
+
+-- main page
+--     retrieving all of users players:
+
+--     SELECT *
+--     FROM user_players
+--     WHERE user_id = 1
+-- ------
+
+
 CREATE DATABASE fantasy_db;
 USE fantasy_db;
 
@@ -93,6 +121,26 @@ CREATE TABLE offensiveline(
 	team varchar(255),
 	PRIMARY KEY(id)
 );
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT NOT NULL,
+    username varchar(230) NOT NULL,
+    email varchar(230) NOT NULL,
+    password_hash varchar(230) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
+CREATE TABLE user_players
+(
+    id int NOT NULL AUTO_INCREMENT,
+	playerable_id INT NOT NULL,
+	playerable_type varchar(230) NOT NULL,
+    user_id INT NOT NULL,
+	PRIMARY KEY (id),
+    FOREIGN KEY (user_id) references users(id)
+);
+
 
 INSERT INTO offensiveline (team) VALUES ("Tennessee Titans");
 INSERT INTO offensiveline (team) VALUES ("Dallas Cowboys");

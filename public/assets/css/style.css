@@ -1,4 +1,6 @@
-* {
+#main,
+h2,
+.login {
     text-align: center;
 }
 
@@ -23,6 +25,9 @@ body {
 #display,
 button,
 #em,
+#pass,
+#username,
+#email,
 input.search {
     color: black;
 }
@@ -114,7 +119,7 @@ i#arrow.fa.fa-angle-double-left {
 #viewTeam {
     font-size: medium;
     margin-top: 10px;
-    margin-left: -21px;
+    margin-left: -34px;
     transform: rotate(90deg);
 }
 
