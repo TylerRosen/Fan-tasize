@@ -118,6 +118,25 @@ i#arrow.fa.fa-angle-double-left {
     transform: rotate(90deg);
 }
 
+li a {
+    font-weight: bold;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #dee0e2;
+}
+
+th {
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 

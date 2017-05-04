@@ -1,7 +1,7 @@
 var request = require('request');
 var cheerio = require('cheerio')
-
 var mysql = require("mysql");
+
 
 var connection = mysql.createConnection({
     port: 3306,
