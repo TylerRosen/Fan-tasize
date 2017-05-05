@@ -1,11 +1,11 @@
 #main,
 h2,
-.login {
+.register {
     text-align: center;
 }
 
 body {
-    background: #262829;
+    background-image: url(../images/field.jpg);
     color: #f7f7f8;
 }
 
@@ -17,8 +17,11 @@ body {
 }
 
 .jumbotron {
-    background: #337ab7;
+    background: #042044;
     color: #cbccce;
+    margin: -40px;
+    padding: 10px;
+    padding-bottom: 20px;
 }
 
 .tfbutton,
@@ -48,7 +51,7 @@ input.search {
     /* Stay on top */
     top: 0;
     right: 0px;
-    background-color: grey;
+    background-color: #042044;
     /* Black*/
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -85,6 +88,8 @@ input.search {
     margin-left: -100px;
     font-size: 36px;
     right: -16px;
+    color: midnightblue;
+    background-color: white;
 }
 
 
@@ -97,6 +102,19 @@ input.search {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+.container {
+    background-color: #fff;
+    color: black;
+    width: 75%;
+    padding-bottom: 15px;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    padding-bottom: 11px;
 }
 
 
@@ -114,6 +132,9 @@ span {
 
 i#arrow.fa.fa-angle-double-left {
     margin-right: -32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5px;
 }
 
 #viewTeam {
@@ -132,7 +153,7 @@ td {
     padding-right: 10px;
     font-size: 15px;
     font-weight: bold;
-    color: #dee0e2;
+    color: black;
 }
 
 th {

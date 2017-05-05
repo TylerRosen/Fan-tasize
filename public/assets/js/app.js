@@ -1,7 +1,11 @@
 /* Set the width of the side navigation to 250px and the right margin of the page content to 250px */
 function openNav() {
-    $("#mySidenav").width(336);
-    $("#main, .container").css({ marginRight: '450px' });
+    $("#mySidenav").css({
+        "width": '336',
+        "border-style": "solid",
+        "border-color": "grey"
+    });
+    $(".container").css({ marginRight: '450px' });
     $("#arrow").css({ marginRight: '297px' });
 }
 
