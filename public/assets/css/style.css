@@ -1,7 +1,11 @@
 #main,
 h2,
-.register {
+.login {
     text-align: center;
+}
+
+.signIn {
+    padding-left: 10px;
 }
 
 #title {
@@ -16,7 +20,8 @@ body {
 .jumbotron,
 #team,
 #search,
-#viewTeam {
+#viewTeam,
+h2 {
     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }
 
