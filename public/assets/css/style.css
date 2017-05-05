@@ -62,6 +62,9 @@ h2,
     margin: -40px;
     padding: 10px;
     padding-bottom: 1px;
+    border-bottom: 5px;
+    border-style: solid;
+    border-color: black;
 }
 
 .tfbutton,
@@ -91,7 +94,7 @@ input.search {
     /* Stay on top */
     top: 0;
     right: 0px;
-    background-color: #042044;
+    background-color: #242628;
     /* Black*/
     overflow-x: hidden;
     /* Disable horizontal scroll */

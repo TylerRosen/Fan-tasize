@@ -3,7 +3,7 @@ function openNav() {
     $("#mySidenav").css({
         "width": '300',
         "border-style": "solid",
-        "border-color": "white"
+        "border-color": "black"
     });
     $(".container").css({ marginRight: '450px' });
     $("#main").css({ marginRight: '320px' });
