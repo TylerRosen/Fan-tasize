@@ -42,7 +42,8 @@ form.create-update-form {
 }
 
 body {
-    background-image: url(../images/field.jpg);
+    /*background-image: url(../images/field.jpg);*/
+    background-color: #cbccce;
     color: #f7f7f8;
 }
 

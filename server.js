@@ -6,6 +6,10 @@ var exphbs = require("express-handlebars");
 var mysql = require('mysql');
 var cookieParser = require('cookie-parser')
 
+// Requres MySQL connection
+
+var connection = require('./config/connection.js');
+
 var app = express();
 app.use(express.static(__dirname + '/public'));
 
@@ -37,13 +41,8 @@ app.use("/team", teamController);
 // Add player
 
 app.post('/add-player', function(req, res) {
-    res.send(req.body.playerable_type);
-    /*
-    	{
-    "player_id": "2",
-    "playerable_type": "quarterbacks"
-    }
-    	*/
+    connection.query("SELECT * FROM user_players WHERE playerable_id = 1 AND playerable_type = 'tightends' AND users_id = 1");
+    connection.query('INSERT INTO user_players (playerable_id, playerable_type, user_id) VALUES (1, "tightends", 1)');
 
 });
 

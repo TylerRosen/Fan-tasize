@@ -32,6 +32,7 @@ USE fantasy_db;
 CREATE TABLE quarterbacks
 (
 	id int NOT NULL AUTO_INCREMENT,
+	position varchar (255) DEFAULT 'quarterbacks',
 	player varchar(255),
 	team varchar(255),
     passydsgm varchar(255),
@@ -50,6 +51,7 @@ CREATE TABLE quarterbacks
 CREATE TABLE runningbacks
 (
 	id int NOT NULL AUTO_INCREMENT,
+	position varchar (255) DEFAULT 'runningbacks',
 	player varchar(255),
 	team varchar(255),
 	rushydsgm varchar(255),
@@ -68,6 +70,7 @@ CREATE TABLE runningbacks
 CREATE TABLE widereceivers
 (
 	id int NOT NULL AUTO_INCREMENT,
+	position varchar (255) DEFAULT 'widereceivers',
 	player varchar(255),
 	team varchar(255),
 	recydsgm varchar(255),
@@ -82,6 +85,7 @@ CREATE TABLE widereceivers
 CREATE TABLE tightends
 (
 	id int NOT NULL AUTO_INCREMENT,
+	position varchar (255) DEFAULT 'tightends',
 	player varchar(255),
 	team varchar(255),
 	recydsgm varchar(255),
@@ -97,7 +101,8 @@ CREATE TABLE tightends
 CREATE TABLE defense
 (
 	id int NOT NULL AUTO_INCREMENT,
-	team varchar(255),
+	position varchar (255) DEFAULT 'defense',
+	player varchar(255),
 	fpsgm varchar(255),
 	ptsallowed varchar(255),
 	intgm varchar(255),
