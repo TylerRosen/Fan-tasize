@@ -6,14 +6,14 @@ function openNav() {
         "border-color": "black"
     });
     $(".container").css({ marginRight: '450px' });
-    $("#main").css({ marginRight: '320px' });
+    $("#main").css({ marginRight: '320px', transition: "0.5s" });
     $("#arrow").css({ marginRight: '267px' });
 }
 
 /* Set the width of the side navigation to 0 and the right margin of the page content to 0 */
 function closeNav() {
     $("#mySidenav").css({ "width": '0', "border": "none" });
-    $("#main").css({ marginRight: '0' });
+    $("#main").css({ marginRight: '0', transition: "0.5s" });
     $(".container").css({ margin: '0 auto' });
     $("#arrow").css({ marginRight: '-32px' });
 }
