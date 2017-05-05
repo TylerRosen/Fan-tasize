@@ -15,7 +15,7 @@ router.get('/sign-in', function(req, res) {
 
 router.get('/sign-out', function(req, res) {
     req.session.destroy(function(err) {
-        res.redirect('/team')
+        res.redirect('/')
     })
 });
 
@@ -29,6 +29,8 @@ router.post('/login', function(req, res) {
             res.redirect('/users/sign-in')
         }
 
+        // res.send(response);
+
         bcrypt.compare(req.body.password, response[0].password_hash, function(err, result) {
             if (result == true) {
 
@@ -38,7 +40,7 @@ router.post('/login', function(req, res) {
                 req.session.company = response[0].company;
                 req.session.username = response[0].username;
 
-                res.redirect('/team');
+                res.redirect('/');
             } else {
                 res.redirect('/users/sign-in')
             }
@@ -72,7 +74,7 @@ router.post('/create', function(req, res) {
                             req.session.user_email = response[0].email;
                             req.session.company = response[0].company;
 
-                            res.redirect('/team')
+                            res.redirect('/')
                         });
                     });
                 });

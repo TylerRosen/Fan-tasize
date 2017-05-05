@@ -18,18 +18,13 @@ function closeNav() {
     $("#arrow").css({ marginRight: '-32px' });
 }
 
+
+// Opens sidebar when arrow is clicked
 $('i.fa.fa-angle-double-left ').click(function() {
     openNav();
 })
 
-// $('#display').click(function() {
-//     $('#players').show();
-//     $('#display').hide();
-// })
-
-$('.addTeam').click(function() {
-    $('#myPlayers').append($('li').text());
-})
+// Appends player to sidebar
 
 $('.add').click(function() {
 
