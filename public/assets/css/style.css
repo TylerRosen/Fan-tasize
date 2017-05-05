@@ -4,6 +4,10 @@ h2,
     text-align: center;
 }
 
+#title {
+    background-color: grey;
+}
+
 body {
     background-image: url(../images/field.jpg);
     color: #f7f7f8;
@@ -18,7 +22,7 @@ body {
 
 .jumbotron {
     background: #042044;
-    color: #cbccce;
+    color: white;
     margin: -40px;
     padding: 10px;
     padding-bottom: 20px;
