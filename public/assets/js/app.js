@@ -6,6 +6,7 @@ function openNav() {
         "border-color": "grey"
     });
     $(".container").css({ marginRight: '450px' });
+    $("#main").css({ marginRight: '350px' });
     $("#arrow").css({ marginRight: '297px' });
 }
 
