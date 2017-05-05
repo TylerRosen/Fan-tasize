@@ -31,6 +31,6 @@ $('.addTeam').click(function() {
     $('#myPlayers').append($('li').text());
 })
 
-// $('#searchBox').submit(function() {
-//     console.log('hello');
-// });
+$('.add').click(function() {
+
+})

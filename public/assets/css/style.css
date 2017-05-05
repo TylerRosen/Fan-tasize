@@ -181,23 +181,20 @@ input.search {
 
 #viewTeam {
     float: right;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-left: -27px;
+    transform: rotate(90deg);
 }
 
 i#arrow.fa.fa-angle-double-left {
     margin-right: -32px;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 19px;
     padding-left: 0px;
     border-style: solid;
     border-color: black;
-}
-
-#viewTeam {
-    font-size: small;
-    font-weight: bold;
-    margin-top: 6px;
-    margin-left: -27px;
-    transform: rotate(90deg);
 }
 
 ul.nav.nav-tabs {
