@@ -113,8 +113,14 @@ input.search {
 
 #myPlayers {
     width: 27%;
-    margin-left: 86px;
+    margin-left: 10px;
     padding-bottom: 10px;
+    list-style: none;
+}
+
+#myPlayers li {
+    display: inline;
+    font-weight: bold;
 }
 
 
