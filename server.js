@@ -41,8 +41,7 @@ app.use("/team", teamController);
 // Add player
 
 app.post('/add-player', function(req, res) {
-    connection.query("SELECT * FROM user_players WHERE playerable_id = 1 AND playerable_type = 'tightends' AND users_id = 1");
-    connection.query('INSERT INTO user_players (playerable_id, playerable_type, user_id) VALUES (1, "tightends", 1)');
+    res.send(req.session.user_id);
 
 });
 
