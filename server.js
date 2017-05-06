@@ -4,7 +4,8 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var exphbs = require("express-handlebars");
 var mysql = require('mysql');
-var cookieParser = require('cookie-parser')
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 // Requres MySQL connection
 
@@ -18,7 +19,6 @@ app.use(bodyParser.urlencoded({
 }))
 
 
-var session = require('express-session');
 //allow sessions
 app.use(session({ secret: 'app', cookie: { maxAge: 1000 * 60 * 60 * 24 * 14 } }));
 app.use(cookieParser());
