@@ -4,6 +4,7 @@ var mysql = require('mysql');
 var connection = require('../config/connection.js')
 
 router.get('/', function(req, res) {
+    console.log(req.session);
     var stats = {};
     connection.query('SELECT * FROM quarterbacks;', function(err, data) {
         stats.quarterbacks = data;
@@ -15,6 +16,7 @@ router.get('/', function(req, res) {
                     stats.tightends = data;
                     connection.query('SELECT * FROM defense', function(err, data) {
                         stats.defense = data;
+                        stats.user = req.session.user || null;
                         res.render('index', stats);
                     })
                 })

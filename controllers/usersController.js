@@ -33,13 +33,12 @@ router.post('/login', function(req, res) {
 
         bcrypt.compare(req.body.password, response[0].password_hash, function(err, result) {
             if (result == true) {
-
-                req.session.logged_in = true;
-                req.session.user_id = response[0].id;
-                req.session.user_email = response[0].email;
-                req.session.company = response[0].company;
-                req.session.username = response[0].username;
-
+                req.session.user = {
+                    id: response[0].id,
+                    email: response[0].email,
+                    company: response[0].company,
+                    username: response[0].username
+                }
                 res.redirect('/');
             } else {
                 res.redirect('/users/sign-in')

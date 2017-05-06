@@ -1,10 +1,12 @@
+{{> header/header}}
+
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div id="myTeam">
     <h1 id="team">My Team</h1>
     <ol id="myPlayers">
       <span class="player">
-        {{#each user_player}}
+        {{#each user_players}}
           <li>{{this.playerable_id}}</li>
           <li>{{this.playerable_type}}</li>  
 
@@ -49,6 +51,30 @@
           <th>RushTds</th>
           <th>Games</th>
         </tr>
+        {{#if this.user}}
+        {{#each quarterbacks}}
+        <tr>
+          <td>{{this.player}}</td>
+          <td>{{this.team}}</td>
+          <td>{{this.passydsgm}}</td>
+          <td>{{this.att}}</td>
+          <td>{{this.comp}}</td>
+          <td>{{this.passcomp}}</td>
+          <td>{{this.tds}}</td>
+          <td>{{this.interceptions}}</td>
+          <td>{{this.rushyds}}</td>
+          <td>{{this.rushtds}}</td>
+          <td>{{this.games}}</td>
+          <td>
+            <form action="/add-player" method="POST">
+              <input type="hidden" name="playerable_id" value="{{this.id}}" class="add">
+              <input type="hidden" name="playerable_type" value="quarterbacks" class="add">
+              <button type="submit">Add Player</button>
+            </form>
+          </td>
+        </tr>
+        {{/each}}
+        {{else}}
         {{#each quarterbacks}}
         <tr>
           <td>{{this.player}}</td>
@@ -66,11 +92,11 @@
             <form action="/add-player" method="POST">
               <input type="hidden" name="player_id" value="{{this.id}}" class="add">
               <input type="hidden" name="playerable_type" value="quarterbacks" class="add">
-              <button type="submit">Add Player</button>
             </form>
           </td>
         </tr>
         {{/each}}
+        {{/if}}
       </table>
     </div>
     <div class="tab-pane" id="rbs">

@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
 
 var session = require('express-session');
 //allow sessions
-app.use(session({ secret: 'app', cookie: { maxAge: 6 * 1000 * 1000 * 1000 * 1000 * 1000 * 1000 } }));
+app.use(session({ secret: 'app', cookie: { maxAge: 1000 * 60 * 60 * 24 * 14 } }));
 app.use(cookieParser());
 
 
@@ -41,7 +41,23 @@ app.use("/team", teamController);
 // Add player
 
 app.post('/add-player', function(req, res) {
-    res.send(req.session.user_id);
+    //res.json({ user_id: req.session.user.id, body: req.body });
+
+    var query = "INSERT INTO user_players (user_id, playerable_id, playerable_type) VALUES (?, ?, ?)"
+    var arr = [req.session.user_id, req.body.playerable_id, req.body.playerable_type];
+    res.send(arr);
+    connection.query(query, arr, function(err, response) {
+        if (err) res.send(err);
+        else {
+            res.send(response);
+        }
+
+        /*
+        "player_id": "2",		
+        "playerable_type": "quarterbacks"
+        */
+
+    });
 
 });
 

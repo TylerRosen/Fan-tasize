@@ -1,0 +1,24 @@
+<div id="main">
+    
+         <div class="signIn">
+
+{{!--Login--}}
+    {{#if this.user}}
+    <a href="/users/sign-out" id="sign-out">Sign Out ({{this.user.username}})</a>
+
+    {{else}}
+    <a href="/users/sign-in">Sign In</a>
+    <a href="/users/new">Register</a> {{/if}} 
+
+    </div>
+    <!-- Use any element to open the sidenav -->
+    <i class="fa fa-angle-double-left" id="arrow"><span id="viewTeam">View Team</span></i>
+
+    <div class="jumbotron">
+      <div id="title">
+      <h1>Fan-tasize</h1>
+      <h3>The #1 solution for creating the best fantasy team!</h3>
+      </div>
+    </div>
+
+    </div>
