@@ -44,12 +44,11 @@ app.post('/add-player', function(req, res) {
     //res.json({ user_id: req.session.user.id, body: req.body });
 
     var query = "INSERT INTO user_players (user_id, playerable_id, playerable_type) VALUES (?, ?, ?)"
-    var arr = [req.session.user_id, req.body.playerable_id, req.body.playerable_type];
-    res.send(arr);
+    var arr = [req.session.user.id, req.body.id, req.body.type];
     connection.query(query, arr, function(err, response) {
-        if (err) res.send(err);
+        if (err) res.json(err);
         else {
-            res.send(response);
+            res.json(response);
         }
 
         /*

@@ -4,7 +4,7 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div id="myTeam">
     <h1 id="team">My Team</h1>
-    <ol id="myPlayers">
+    <ul id="myPlayers">
       <span class="player">
         {{#each user_players}}
           <li>{{this.playerable_id}}</li>
@@ -12,7 +12,7 @@
 
         {{/each}}
           </span>
-    </ol>
+    </ul>
 
 
   </div>
@@ -66,7 +66,7 @@
           <td>{{this.rushtds}}</td>
           <td>{{this.games}}</td>
           <td>
-            <form action="/add-player" method="POST">
+            <form class="player-form" data-player-name="{{this.player}}" data-player="{{this.id}}" data-type="quarterback">
               <input type="hidden" name="playerable_id" value="{{this.id}}" class="add">
               <input type="hidden" name="playerable_type" value="quarterbacks" class="add">
               <button type="submit">Add Player</button>
@@ -89,7 +89,7 @@
           <td>{{this.rushtds}}</td>
           <td>{{this.games}}</td>
           <td>
-            <form action="/add-player" method="POST">
+            <form class="player-form" data-player-name="{{this.player}}" data-player="{{this.id}}" data-type="quarterback">
               <input type="hidden" name="player_id" value="{{this.id}}" class="add">
               <input type="hidden" name="playerable_type" value="quarterbacks" class="add">
             </form>
@@ -128,7 +128,7 @@
           <td>{{this.rectds}}</td>
           <td>{{this.games}}</td>
           <td>
-            <form action="/add-player" method="POST">
+            <form class="player-form" data-player-name="{{this.player}}" data-player="{{this.id}}" data-type="runningback">
               <input type="hidden" name="player_id" value="{{this.id}}" class="add">
               <input type="hidden" name="playerable_type" value="runningbacks" class="add">
               <button type="submit">Add Player</button>
@@ -161,7 +161,7 @@
           <td>{{this.rectds}}</td>
           <td>{{this.games}}</td>
           <td>
-            <form action="/add-player" method="POST">
+            <form class="player-form" data-player-name="{{this.player}}" data-player="{{this.id}}" data-type="widereceiver">
               <input type="hidden" name="player_id" value="{{this.id}}" class="add">
               <input type="hidden" name="playerable_type" value="widereceivers" class="add">
               <button type="submit">Add Player</button>
@@ -196,7 +196,7 @@
           <td>{{this.rectds}}</td>
           <td>{{this.games}}</td>
           <td>
-            <form action="/add-player" method="POST">
+            <form class="player-form" data-player-name="{{this.player}}" data-player="{{this.id}}" data-type="tightend">
               <input type="hidden" name="player_id" value="{{this.id}}" class="add">
               <input type="hidden" name="playerable_type" value="tightends" class="add">
               <button type="submit">Add Player</button>
@@ -241,7 +241,7 @@
           <td>{{this.rbpts}}</td>
           <td>{{this.wrpts}}</td>
           <td>
-            <form action="/add-player" method="POST">
+            <form class="player-form" data-player-name="{{this.player}}" data-player="{{this.id}}" data-type="defense">
               <input type="hidden" name="player_id" value="{{this.id}}" class="add">
               <input type="hidden" name="playerable_type" value="defense" class="add">
               <button type="submit">Add Player</button>
