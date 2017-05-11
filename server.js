@@ -11,7 +11,8 @@ var session = require('express-session');
 
 var connection = require('./config/connection.js');
 
-var app = express();
+var app = module.exports = express();
+
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.urlencoded({
