@@ -15,7 +15,7 @@ a {
 
 .signIn {
     text-align: left;
-    margin-left: 10px;
+    background-color: black;
 }
 
 #team {
@@ -61,6 +61,7 @@ h2,
     background: #042044;
     color: white;
     margin: -40px;
+    margin-top: 0px;
     padding: 10px;
     padding-bottom: 1px;
     border-bottom: 5px;

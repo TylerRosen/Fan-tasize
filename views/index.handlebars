@@ -1,3 +1,15 @@
+   <div class="signIn">
+
+{{!--Login--}}
+    {{#if this.user}}
+    <a href="/users/sign-out" id="sign-out">Sign Out ({{this.user.username}})</a>
+
+    {{else}}
+    <a href="/users/sign-in">Sign In</a>
+    <a href="/users/new">Register</a> {{/if}} 
+
+    </div>
+
 {{> header/header}}
 
 <div id="mySidenav" class="sidenav">
