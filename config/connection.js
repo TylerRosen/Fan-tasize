@@ -1,5 +1,10 @@
+// Set up MySQL connection.
 var mysql = require("mysql");
 var app = require('../server');
+
+console.log('--------------the environment we are using----------------');
+console.log(app.settings.env);
+console.log('--------------the environment we are using----------------');
 
 if (app.settings.env == 'development') {
     var connection = mysql.createConnection({
