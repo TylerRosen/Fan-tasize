@@ -12,6 +12,7 @@ var session = require('express-session');
 var connection = require('./config/connection.js');
 
 var app = module.exports = express();
+var port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
 
@@ -52,17 +53,8 @@ app.post('/add-player', function(req, res) {
             res.json(response);
         }
 
-        /*
-        "player_id": "2",		
-        "playerable_type": "quarterbacks"
-        */
-
     });
 
 });
 
-
-
-
-var port = process.env.PORT || 3000;
 app.listen(port);
