@@ -3,10 +3,10 @@ var mysql = require("mysql");
 if (app.settings.env == 'development') {
     var connection = mysql.createConnection({
         port: 3306,
-        host: "localhost",
-        user: "root",
-        password: "raiders76",
-        database: "fantasy_db"
+        host: "o3iyl77734b9n3tg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        user: "j605fljbq1ql2utu",
+        password: "uvae95o9emw70cyw",
+        database: "n5z5wdf7movbhi4g"
     });
 } else {
     var connection = mysql.createConnection(process.env.JAWSDB_URL);
