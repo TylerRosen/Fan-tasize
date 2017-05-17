@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 });
 
 // Make connection.
-connection.connect(function(err) {
+connection.connect(function (err) {
     if (err) {
         console.error("error connecting: " + err.stack);
         return;
@@ -21,7 +21,7 @@ connection.connect(function(err) {
 });
 
 
-request('https://www.landof10.com/big-ten/2017-fantasy-football-rankings', function(error, response, body) {
+request('https://www.landof10.com/big-ten/2017-fantasy-football-rankings', function (error, response, body) {
 
     // console.log(body);
 
@@ -32,17 +32,17 @@ request('https://www.landof10.com/big-ten/2017-fantasy-football-rankings', funct
     //Player, Team, Comp, Att, Yards, Tds, interceptions
 
     //skip first row
-    tableRows.slice(1).each(function(i, element) {
+    tableRows.slice(1).each(function (i, element) {
         "use strict";
         let cleanRow = [];
         let justThese = [0, 1, 2];
         let tds = $(element).children('td');
 
-        tds.each(function(tdIndex, td) {
+        tds.each(function (tdIndex, td) {
             cleanRow.push($(this).text().trim());
         });
 
-        let filteredRow = cleanRow.filter(function(el, i) {
+        let filteredRow = cleanRow.filter(function (el, i) {
             if (justThese.indexOf(i) >= 0) return el;
         });
         //player, team, pos, rec, yards, avg, ydsg, tds
@@ -50,7 +50,7 @@ request('https://www.landof10.com/big-ten/2017-fantasy-football-rankings', funct
             filteredRow[0],
             filteredRow[1],
             filteredRow[2]
-        ], function(err, res) {
+        ], function (err, res) {
             if (err) return console.log(err);
             else console.log('done')
         });
