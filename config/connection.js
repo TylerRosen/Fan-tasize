@@ -7,7 +7,7 @@ var app = require('../server');
 // console.log('--------------the environment we are using----------------');
 
 if (process.env.JAWSDB_URL) {
-    var connection = mysql.createConnection(process.evn.JAWSDB_URL);
+    var connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     connection = mysql.createConnection({
         port: 3306,

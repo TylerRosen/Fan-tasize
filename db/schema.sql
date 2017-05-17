@@ -187,3 +187,9 @@ CREATE TABLE tophundred(
     posrank varbinary(255),
 	PRIMARY KEY(id)
 );
+
+DELETE FROM quarterbacks WHERE id = 1;
+DELETE FROM runningbacks WHERE id = 1;
+DELETE FROM tightends WHERE id = 1;
+DELETE FROM defense WHERE id = 1;
+DELETE FROM offensiveline WHERE id = 1;
