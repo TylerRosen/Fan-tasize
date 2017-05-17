@@ -2,21 +2,21 @@
 var mysql = require("mysql");
 var app = require('../server');
 
-console.log('--------------the environment we are using----------------');
-console.log(app.settings.env);
-console.log('--------------the environment we are using----------------');
+// console.log('--------------the environment we are using----------------');
+// console.log(app.settings.env);
+// console.log('--------------the environment we are using----------------');
 
-if (app.settings.env == 'development') {
-    var connection = mysql.createConnection({
+if (process.env.JAWSDB_URL) {
+    var connection = mysql.createConnection(process.evn.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection({
         port: 3306,
         host: "localhost",
         user: "root",
         password: "raiders76",
         database: "fantasy_db"
     });
-} else {
-    var connection = mysql.createConnection(process.env.JAWSDB_URL);
-}
+};
 
 // Make connection.
 connection.connect(function(err) {
