@@ -4,13 +4,8 @@ h2,
     text-align: center;
 }
 
-body {
-    background-image: url(../images/field.jpg);
-}
-
-#title {
-    color: #cbccce;
-    text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
+#logoColor {
+    color: #3d5170;
 }
 
 a {
@@ -46,7 +41,7 @@ form.create-update-form {
 }
 
 body {
-    /*background-image: url(../images/field.jpg);*/
+    background-image: url(../images/field.jpg);
     background-color: #cbccce;
     color: #f7f7f8;
 }
@@ -58,11 +53,16 @@ body {
 h2,
 .login,
 .signIn {
-    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-family: 'Ek Mukta', sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-weight: medium;
 }
 
 .jumbotron {
-    background: #042044;
+    background: black;
     color: white;
     margin: -40px;
     margin-top: 0px;
@@ -71,6 +71,7 @@ h2,
     border-bottom: 5px;
     border-style: solid;
     border-color: black;
+    /* width: 100%; */
 }
 
 .tfbutton,
