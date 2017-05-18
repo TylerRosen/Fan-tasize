@@ -4,6 +4,10 @@ h2,
     text-align: center;
 }
 
+body {
+    background-image: url(../images/field.jpg);
+}
+
 #title {
     color: #cbccce;
     text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
