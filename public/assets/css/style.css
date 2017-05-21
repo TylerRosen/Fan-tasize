@@ -4,6 +4,10 @@ h2,
     text-align: center;
 }
 
+h2 {
+    color: white;
+}
+
 #logoColor {
     color: #3d5170;
 }
@@ -64,7 +68,7 @@ h3 {
 .jumbotron {
     background: black;
     color: white;
-    margin: -40px;
+    margin: 0 auto;
     margin-top: 0px;
     padding: 10px;
     padding-bottom: 1px;
@@ -173,9 +177,17 @@ input.search {
 }
 
 .container {
-    background-color: #fff;
+    background-color: midnightblue;
     color: black;
     padding-bottom: 15px;
+}
+
+.stats {
+    padding: 30px;
+}
+
+.tab-content {
+    background-color: white;
 }
 
 .nav-tabs>li.active>a,
@@ -213,6 +225,8 @@ i#arrow.fa.fa-angle-double-left {
 ul.nav.nav-tabs {
     padding-left: 20%;
     padding-right: 20%;
+    background-color: black;
+    color: white;
 }
 
 li {

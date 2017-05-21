@@ -46,7 +46,7 @@ request('https://fantasyfootballers.org/nfl-team-defense-fantasy-stats/', functi
             if (justThese.indexOf(i) >= 0) return el;
         });
         //player, team, pos, rec, yards, avg, ydsg, tds
-        connection.query("INSERT INTO defense (player, fpsgm, ptsallowed, intgm, fumrecgm, sacksgm, totalint, totalfum, totalsacks, safeties, deftds, qbpts, rbpts, wrpts, tepts, kickerpts) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [
+        connection.query("INSERT INTO defense (team, fpsgm, ptsallowed, intgm, fumrecgm, sacksgm, totalint, totalfum, totalsacks, safeties, deftds, qbpts, rbpts, wrpts, tepts, kickerpts) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [
             filteredRow[0],
             filteredRow[1],
             filteredRow[2],
