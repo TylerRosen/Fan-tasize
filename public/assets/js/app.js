@@ -8,7 +8,7 @@ function openNav() {
     $(".container").css({ marginRight: "450px" });
     $("#main").css({ marginRight: "320px", transition: "0.5s" });
     $("#arrow").css({ marginRight: "267px" });
-    $(".jumbotron").css({ margin: "-40px" });
+    $(".page-header").css({ width: "102%" });    
 }
 
 /* Set the width of the side navigation to 0 and the right margin of the page content to 0 */
@@ -17,7 +17,7 @@ function closeNav() {
     $("#main").css({ marginRight: "0", transition: "0.5s" });
     $(".container").css({ margin: "0 auto" });
     $("#arrow").css({ marginRight: "-32px" });
-    $(".jumbotron").css({ margin: "0 auto" });
+    $(".page-header").css({ width: "100%" });
 }
 
 // Opens sidebar when arrow is clicked

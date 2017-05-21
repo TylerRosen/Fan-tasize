@@ -4,6 +4,15 @@ h2,
     text-align: center;
 }
 
+.image {
+    float: top;
+}
+
+#logo {
+    margin: -40px;
+    margin-bottom: -138px;
+}
+
 h2 {
     color: white;
 }
@@ -18,7 +27,7 @@ a {
 
 .signIn {
     text-align: left;
-    background-color: black;
+    background-color: #231f20;
 }
 
 #team {
@@ -50,7 +59,7 @@ body {
     color: #f7f7f8;
 }
 
-.jumbotron,
+.page-header,
 #team,
 #search,
 #viewTeam,
@@ -65,17 +74,17 @@ h3 {
     font-weight: medium;
 }
 
-.jumbotron {
-    background: black;
+.page-header {
+    background: #231f20;
     color: white;
     margin: 0 auto;
     margin-top: 0px;
-    padding: 10px;
+    padding: 40px;
     padding-bottom: 1px;
     border-bottom: 5px;
-    border-style: solid;
-    border-color: black;
-    /* width: 100%; */
+    /* border-style: solid; */
+    /* border-color: black; */
+    width: 100%;
 }
 
 .tfbutton,
