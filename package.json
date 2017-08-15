@@ -1,34 +1,37 @@
 {
-  "name": "fan-tasizer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "1.17.1",
-    "cheerio": "^0.22.0",
-    "cookie-parser": "^1.4.3",
-    "express": "4.15.2",
-    "express-handlebars": "3.0.0",
-    "express-session": "^1.15.2",
-    "method-override": "2.3.8",
-    "mysql": "2.13.0",
-    "request": "^2.81.0",
-    "router": "1.3.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TylerRosen/Fantasize.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TylerRosen/Fantasize/issues"
-  },
-  "homepage": "https://github.com/TylerRosen/Fantasize#readme"
+    "name": "fan-tasizer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "1.17.1",
+        "cheerio": "^0.22.0",
+        "cookie-parser": "^1.4.3",
+        "express": "4.15.2",
+        "express-handlebars": "3.0.0",
+        "express-session": "^1.15.2",
+        "method-override": "2.3.8",
+        "mysql": "2.13.0",
+        "request": "^2.81.0",
+        "router": "1.3.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TylerRosen/Fantasize.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/TylerRosen/Fantasize/issues"
+    },
+    "engines": {
+        "node": "6.11.1"
+    },
+    "homepage": "https://github.com/TylerRosen/Fantasize#readme"
 }
